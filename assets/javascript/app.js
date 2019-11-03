@@ -1,4 +1,10 @@
-//  Simple Timer Solution
+//  Trivia Game Timer
+
+window.onload = function () {
+
+  alert("Let's play Trivia!");
+
+};
 
 // Step 1:
 // Use the following Audio file below:
