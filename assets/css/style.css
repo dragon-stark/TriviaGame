@@ -1,13 +1,12 @@
 /* 
 font-family: 'Fredericka the Great', cursive;
 font-family: 'Emilys Candy', cursive;
-font-family: 'Vast Shadow', cursive; */
+font-family: 'Chango', cursive; */
 
 
 
 body {
 font-family:  'Fredericka the Great', cursive;
-
 font-size: 35px;
 font-display:center;
 background: url("../images/634-2200x1467.jpg");
@@ -15,9 +14,10 @@ background: url("../images/634-2200x1467.jpg");
 
 .jumbotron {
   font-size: 40px;
-  background-color: lavenderblush;
+  background-color: rgb(250, 246, 248);
   text-align: center;
   color: rgb(185, 223, 247);
+  border-block-color: rgb(186, 233, 186);
 }
 
 .lead {
@@ -28,15 +28,28 @@ background: url("../images/634-2200x1467.jpg");
   
 }
 .container {
-position: relative;
-font-family: 'Fredericka the Great', cursive;
+  display: inline-block;
+  position: relative;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .form-group {
-  background-color: rgba(185, 224, 250, 0.973);
-  opacity: .6;
+  background-color: rgba(32, 95, 37, 0.973);
+  opacity: .7;
   text-align: left;
-  margin: 15px;
+  /* margin: 15px; */
   font-family: 'Emilys Candy', cursive;
- vertical-align: 20px;
+  vertical-align: 35px;
+  color: floralwhite;
+}
+.form-control {
+
+  padding: 5px;
+}
+#exampleFormControlInput {
+  font-size: 1.5em;
+
+  /* opacity: .1; */
+  margin-inline: 100;
+
 }
