@@ -2,7 +2,7 @@
 
 window.onload = function () {
 
-  alert("Let's play Trivia!");
+  alert("Are you ready to play?");
 
 };
 

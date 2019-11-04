@@ -1,0 +1,42 @@
+/* 
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Emilys Candy', cursive;
+font-family: 'Vast Shadow', cursive; */
+
+
+
+body {
+font-family:  'Fredericka the Great', cursive;
+
+font-size: 35px;
+font-display:center;
+background: url("../images/634-2200x1467.jpg");
+}
+
+.jumbotron {
+  font-size: 40px;
+  background-color: lavenderblush;
+  text-align: center;
+  color: rgb(185, 223, 247);
+}
+
+.lead {
+  font-size: 45px;
+  font-family: 'Fredericka the Great', cursive;
+  color: rgb(241, 7, 7);
+  margin: 100px;
+  
+}
+.container {
+position: relative;
+font-family: 'Fredericka the Great', cursive;
+}
+
+.form-group {
+  background-color: rgba(185, 224, 250, 0.973);
+  opacity: .6;
+  text-align: left;
+  margin: 15px;
+  font-family: 'Emilys Candy', cursive;
+ vertical-align: 20px;
+}

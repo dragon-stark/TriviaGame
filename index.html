@@ -2,33 +2,63 @@
 <html lang="en">
 
 <head>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Emilys+Candy|Fredericka+the+Great|Vast+Shadow&display=swap');
+	</style>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<!-- jQuery -->
-	<script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-		</script>
-	<!--ajax-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
+	<title>Welcome to this Trivia Game</title>
+	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- bootstrap -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-
-	<title>Welcome to this Trivia Game</title>
 
 </head>
 
 <body>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">Let's Play Trivia!</h1>
+			<p class="lead">This is a simple game of trivia. To play, you must answer the questions within a predifined amount
+				of time in order to win.</p>
+		</div>
+	</div>
+	<form><br>
+		<div id="time-left"></div>
 
-	<div id="time-left"></div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">First Question</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer">
+		</div><br>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Second Question</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer">
+		</div><br>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Finally your Third Question</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer">
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1">Your answer goes here</label>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		</div>
+	</form>
 
-
+	</div>
 	<!-- Script -->
 	<script src="assets/javascript/app.js"></script>
+	<!-- jQuery -->
+	<script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+
+
+
+
+
 
 </body>
 
