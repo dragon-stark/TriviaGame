@@ -1,6 +1,19 @@
 //  Trivia Game Timer
 
-window.onload = function () {
+
+
+
+
+
+
+
+$("#target").click(function ()) {
+  alert("You have two minutes to answer three questions");
+};
+setTimeout(gamelost, 120000);
+
+
+button.onClick = function () {
 
   alert("Are you ready to play?");
 
@@ -15,9 +28,9 @@ var audio = new Audio("bell.mp3");
 //  after 10 seconds, execute the tenSeconds function
 //  after 15 seconds, execute the timeUp function
 
-setTimeout(fiveSeconds, 1000 * 5);
-setTimeout(tenSeconds, 1000 * 10);
-setTimeout(timeUp, 1000 * 15);
+setTimeout(fiveSeconds, 1000 * 10);
+setTimeout(tenSeconds, 1000 * 20);
+setTimeout(timeUp, 1000 * 30);
 
 //  Step 3:
 //  Fill in the blanks to these functions.

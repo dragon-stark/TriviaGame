@@ -1,55 +1,65 @@
-/* 
+/*
 font-family: 'Fredericka the Great', cursive;
 font-family: 'Emilys Candy', cursive;
 font-family: 'Chango', cursive; */
 
-
-
 body {
-font-family:  'Fredericka the Great', cursive;
-font-size: 35px;
-font-display:center;
-background: url("../images/634-2200x1467.jpg");
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 35px;
+	font-display: center;
+	background-image: url('../images/rainbow.jpg');
 }
 
 .jumbotron {
-  font-size: 40px;
-  background-color: rgb(250, 246, 248);
-  text-align: center;
-  color: rgb(185, 223, 247);
-  border-block-color: rgb(186, 233, 186);
+	font-size: 35px;
+	background-color: rgba(45, 45, 46, 0.452);
+	text-align: center;
+	color: rgb(185, 223, 247);
+	/* border-block-color: rgb(186, 233, 186); */
+	margin: 50px;
+	margin-left: 55px;
+	margin-right: 55px;
+	padding: 55px;
+	border-width: 3px;
+	border-style: outset;
 }
 
 .lead {
-  font-size: 45px;
-  font-family: 'Fredericka the Great', cursive;
-  color: rgb(241, 7, 7);
-  margin: 100px;
-  
+	font-size: 30px;
+	font-family: 'Fredericka the Great', cursive;
+	/* color: rgb(173, 212, 82); */
+	margin: 50px;
 }
 .container {
-  display: inline-block;
-  position: relative;
-  font-family: 'Fredericka the Great', cursive;
+	display: inline-block;
+	position: relative;
+	font-family: 'Fredericka the Great', cursive;
 }
 
 .form-group {
-  background-color: rgba(32, 95, 37, 0.973);
-  opacity: .7;
-  text-align: left;
-  /* margin: 15px; */
-  font-family: 'Emilys Candy', cursive;
-  vertical-align: 35px;
-  color: floralwhite;
+	background-color: rgba(32, 95, 37, 0.973);
+	opacity: 0.7;
+	text-align: left;
+	/* margin: 15px; */
+	font-family: 'Emilys Candy', cursive;
+	vertical-align: 35px;
+	color: floralwhite;
 }
 .form-control {
-
-  padding: 5px;
+	padding: 5px;
 }
 #exampleFormControlInput {
-  font-size: 1.5em;
+	font-size: 1.5em;
 
-  /* opacity: .1; */
-  margin-inline: 100;
-
+	/* opacity: .1; */
+	margin-inline: 100;
+}
+.btn {
+	border: rgb(97, 103, 129);
+	border-width: 3px;
+	border-style: outset;
+	background-color: rgba(136, 156, 243);
+	color: aliceblue;
+	text-decoration: none;
+	text-emphasis-position: center;
 }
