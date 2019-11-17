@@ -1,5 +1,5 @@
 # TriviaGame
 
 <link src="https://dragon-stark.github.io/TriviaGame/">
-</link>
+Go to Trivia Game</link>
 This is a game of trivia
