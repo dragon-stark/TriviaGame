@@ -1,72 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Chango|Emilys+Candy|Fredericka+the+Great&display=swap');
+		</style>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Trivia Game</title>
 
-<head>
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Chango|Emilys+Candy|Fredericka+the+Great&display=swap');
-	</style>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Trivia Game</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+		<link rel="stylesheet" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- bootstrap -->
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="display-4">Let's Play!</h1>
+				<br />
+				<p class="lead">This is a simple game of random trivia.</p>
+				<br />
+				<p>To play, you must answer the questions within a predifined amount of time in order to win.</p>
+				<br />
+				<div id="start"><a class="btn btn-secondary btn-lg" href="#!" role="button">Start Game</a></div>
+				<div id="countdown"></div>
+				<h2 id="question"></h2>
+			</div>
+			<br />
+			<form>
+				<div id="time-left"></div>
 
-			<link rel="stylesheet" href="assets/css/reset.css">
-				<link rel="stylesheet" href="assets/css/style.css">
-
-				<!-- bootstrap -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-
-
-<body>
-	<div class="container">
-
-	<div class="jumbotron">
-
-			<h1 class="display-4">Let's Play!</h1>
-			<br>
-			<p class="lead">This is a simple game of random trivia. </p><br><p> To play, you must answer the questions within a predifined amount
-				of time in order to win.</p>	<br>
-			  <div id="target"> <a class="btn btn-secondary btn-lg" href="#!" role="button">Start Game</a></div>
-
-</div>
-<br>
-	<form>
-		<div id="time-left"></div>
-
-		<div class="form-group">
-			<label for="exampleFormControlInput1">How many colours are there in a rainbow?. . .  7 </label>
-			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer">
-		</div><br>
-		<div class="form-group">
-			<label for="exampleFormControlInput1">What is the world's largest ocean? . . . . . Pacific </label>
-			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer">
-		</div><br>
-		<div class="form-group">
-			<label for="exampleFormControlInput1">What is the only rock regularly eaten by humans? . . . . . Salt </label>
-			<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Answer">
+				<div class="form-group">
+					<label for="exampleFormControlInput1">How many colours are there in a rainbow?. . . 7 </label>
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer" />
+				</div>
+				<br />
+				<div class="form-group">
+					<label for="exampleFormControlInput1">What is the world's largest ocean? . . . . . Pacific </label>
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer" />
+				</div>
+				<br />
+				<div class="form-group">
+					<label for="exampleFormControlInput1">What is the only rock regularly eaten by humans? . . . . . Salt </label>
+					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Answer" />
+				</div>
+				<br />
+			</form>
 		</div>
-		<br>
-
-	</form>
-
-	</div>
-	<!-- Script -->
-	<script src="assets/javascript/app.js"></script>
-	<!-- jQuery -->
-	<script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-		</script>
-
-
-
-
-
-
-</body>
-
+		<!-- Script -->
+		<script src="assets/javascript/app.js"></script>
+		<!-- jQuery -->
+		<script
+			src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
