@@ -2,58 +2,58 @@
 <html lang="en">
 	<head>
 		<style>
-			@import url('https://fonts.googleapis.com/css?family=Chango|Emilys+Candy|Fredericka+the+Great&display=swap');
+			@import url("https://fonts.googleapis.com/css?family=Chango|Emilys+Candy|Fredericka+the+Great&display=swap");
 		</style>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Trivia Game</title>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<link rel="stylesheet" href="assets/css/reset.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
 		<!-- bootstrap -->
 		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 			crossorigin="anonymous"
 		></script>
+
+		<link rel="stylesheet" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
 		<div class="container">
 			<div class="jumbotron">
-				<h1 class="display-4">Let's Play!</h1>
-				<br />
-				<p class="lead">This is a simple game of random trivia.</p>
-				<br />
-				<p>To play, you must answer the questions within a predifined amount of time in order to win.</p>
-				<br />
-				<div id="start"><a class="btn btn-secondary btn-lg" href="#!" role="button">Start Game</a></div>
-				<div id="countdown"></div>
-				<h2 id="question"></h2>
-			</div>
-			<br />
-			<form>
-				<div id="time-left"></div>
+				<div id="game">
+					<h1>Trivia Game</h1><br><p>
+						This game will ask a series of random multiple choice questions. </p><br><p>√ You
+						This game will ask a series of random multiple choice questions. </p><br><p>√ You
+						will have 30 seconds per question. </p><br><p>√ Answer correctly to win. Have Fun!
+					</h4></p>
+					<br />
+					<p id="remaining-time" class="lead">
+						Remaining Time: <span id="timer"></span>
+					</p>
+					<br />
+					<p id="question" class="lead"></p>
+				</div>
+				<div id="results"></div>
 
-				<div class="form-group">
-					<label for="exampleFormControlInput1">How many colours are there in a rainbow?. . . 7 </label>
-					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer" />
+				<div class="row">
+					<div id="choices" class="text-center">
+						<button id="start" class="btn btn-info btn-lg">Start Game</button>
+						<div id="options"></div>
+					</div>
 				</div>
-				<br />
-				<div class="form-group">
-					<label for="exampleFormControlInput1">What is the world's largest ocean? . . . . . Pacific </label>
-					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Answer" />
-				</div>
-				<br />
-				<div class="form-group">
-					<label for="exampleFormControlInput1">What is the only rock regularly eaten by humans? . . . . . Salt </label>
-					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Answer" />
-				</div>
-				<br />
-			</form>
+			</div>
 		</div>
 		<!-- Script -->
 		<script src="assets/javascript/app.js"></script>
