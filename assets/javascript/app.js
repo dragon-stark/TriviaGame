@@ -26,19 +26,22 @@ var trivia = {
   questions: {
     q1: "How many colors are there in a rainbow?",
     q2: "What is the only rock regularly eaten by humans?",
-    q3: "What is the Worlds largest ocean?"
+    q3: "What is the Worlds largest ocean?",
+    q4: "What was the first toy ever advertised on TV?"
   },
 
   options: {
     q1: ["Six", "Five", "Seven", "Ten"],
     q2: ["Chocolate rocks", "Salt", "Fudge rocks", "Punk rock"],
-    q3: ["Atlantic", "Arctic", "Pacific", "Indian"]
+    q3: ["Atlantic", "Arctic", "Pacific", "Indian"],
+    q4: ["Barbie", "Legos", "Mr. Potato Head", "Teddy Bear"]
   },
 
   answers: {
     q1: 'Seven',
     q2: 'Salt',
-    q3: 'Pacific'
+    q3: 'Pacific',
+    q4: 'Mr. Potato Head'
   },
   //Start game
   startGame: function ()
