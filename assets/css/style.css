@@ -25,16 +25,29 @@ body {
 }
 
 .container {
-	display: inline-block;
 	position: relative;
 	font-family: "Fredericka the Great", cursive;
 	display: inline-block;
 	margin: 5%;
 }
+.button {
+	text-decoration: none;
+	color: rgba(66, 64, 64, 0.8);
+	background: #f7fac0;
+	padding: 15px 40px;
+	border-radius: 4px;
+	font-weight: normal;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
 
+.glow-button:hover {
+	color: rgb(189, 237, 131);
+	box-shadow: 0 5px 15px rgba(201, 203, 175, 0.954);
+}
 #choices #start #remaining-time {
 	border: rgb(97, 103, 129);
-	border-width: 3px;
+	border-width: 11px;
 	border-style: outset;
 	background-color: rgba(136, 156, 243);
 	color: aliceblue;
