@@ -7,23 +7,26 @@ body {
 	font-family: "Fredericka the Great", cursive;
 	font-size: 35px;
 	font-display: center;
-	background-image: url("../images/rainbow.jpg");
-}
 
+	background-image: url("../images/rainbow.jpg");
+
+}
 .jumbotron {
 	font-size: 35px;
-	background-color: rgba(45, 45, 46, 0.452);
+	color: #fff;
+	margin:  auto;
+	filter: brightness(100%);
+	background-color: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* width: 100%; */
+	border-radius: 15px;
+	backdrop-filter: blur(45px);
 	text-align: center;
-	color: rgb(185, 223, 247);
-	border-block-color: rgb(186, 233, 186);
-	margin: 50px;
-	margin-left: 55px;
-	margin-right: 55px;
+	border-block-color: rgba(253, 253, 253, 0.954);
 	padding: 55px;
 	border-width: 3px;
 	border-style: outset;
 }
-
 .container {
 	position: relative;
 	font-family: "Fredericka the Great", cursive;
@@ -33,17 +36,17 @@ body {
 .button {
 	text-decoration: none;
 	color: rgba(66, 64, 64, 0.8);
-	background: #f7fac0;
-	padding: 15px 40px;
+	background: #beddf4;
+	padding: 20px 40px;
 	border-radius: 4px;
-	font-weight: normal;
+	font-weight: 400;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
 
 .glow-button:hover {
-	color: rgb(189, 237, 131);
-	box-shadow: 0 5px 15px rgba(201, 203, 175, 0.954);
+	color: rgb(248, 13, 45);
+	box-shadow: 0 5px 15px rgba(254, 255, 234, 0.954);
 }
 #choices #start #remaining-time {
 	border: rgb(97, 103, 129);
@@ -70,17 +73,19 @@ body {
 	color: rgb(179, 6, 6);
 }
 .option {
+	font-size: .5em;
 	margin: 15px;
 	padding: 15px;
 }
 p {
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 h1 {
-	font-size: 2em;
-	color: mediumpurple;
+	font-size: 1.5em;
+	color: rgb(213, 212, 251);
 }
 #question {
-	color: mediumpurple;
+	color: rgb(11, 9, 17);
 	font-size: 1.5em;
+	padding: 25px;
 }
