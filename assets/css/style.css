@@ -1,91 +1,106 @@
-/*
-font-family: 'Fredericka the Great', cursive;
-font-family: 'Emilys Candy', cursive;
-font-family: 'Chango', cursive; */
+/* Font styles */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Emilys+Candy&family=Chango&display=swap');
 
+/* Body styles */
 body {
-	font-family: "Fredericka the Great", cursive;
-	font-size: 35px;
-	font-display: center;
-
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 1.875rem;
 	background-image: url("../images/rainbow.jpg");
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
 }
+
+/* Jumbotron styles */
 .jumbotron {
-	font-size: 35px;
+	font-size: 1.875rem;
 	color: #fff;
-	margin:  auto;
 	filter: brightness(100%);
 	background-color: rgba(255, 255, 255, 0.06);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	/* width: 100%; */
-	border-radius: 15px;
-	backdrop-filter: blur(45px);
+	border-radius: 22.5px;
+	backdrop-filter: blur(33.75px);
 	text-align: center;
 	border-block-color: rgba(253, 253, 253, 0.954);
-	padding: 55px;
-	border-width: 3px;
+	padding: 7.5rem;
+	border-width: 4.5px;
 	border-style: outset;
 }
+
+/* Container styles */
 .container {
 	position: relative;
-	font-family: "Fredericka the Great", cursive;
+	font-family: 'Fredericka the Great', cursive;
 	display: inline-block;
-	margin: 5%;
+	margin: 7.5%;
 }
+
+/* Button styles */
 .button {
 	text-decoration: none;
 	color: rgba(66, 64, 64, 0.8);
 	background: #beddf4;
-	padding: 20px 40px;
-	border-radius: 4px;
+	padding: 1.875rem 3.75rem;
+	border-radius: 7.5px;
 	font-weight: 400;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
 
-.glow-button:hover {
+.button:hover {
 	color: rgb(248, 13, 45);
-	box-shadow: 0 5px 15px rgba(254, 255, 234, 0.954);
+	box-shadow: 0 4.6875px 14.0625px rgba(254, 255, 234, 0.954);
 }
+
+/* Timer styles */
 #choices #start #remaining-time {
-	border: rgb(97, 103, 129);
-	border-width: 11px;
-	border-style: outset;
+	border: 14.0625px outset rgb(97, 103, 129);
 	background-color: rgba(136, 156, 243);
 	color: aliceblue;
-	text-emphasis-position: center;
+	text-align: center;
+	font-family: 'Chango', cursive;
+	font-size: 1.5em;
 	display: inline;
 	position: relative;
-	font-family: "Chango", cursive;
-	font-size: 2em;
 }
+
 #timer {
-	font-family: "Chango", cursive;
+	font-family: 'Chango', cursive;
 	font-size: larger;
 	display: inline;
 	position: relative;
 }
+
+/* Text styles */
 .text-muted {
 	color: blue;
 }
+
 .last-seconds {
 	color: rgb(179, 6, 6);
 }
+
+/* Option styles */
 .option {
-	font-size: .5em;
-	margin: 15px;
-	padding: 15px;
+	font-size: 0.375em;
+	margin: 1.125rem;
+	padding: 1.125rem;
 }
+
 p {
-	font-size: 0.7em;
+	font-size: 0.525em;
 }
+
+/* Heading styles */
 h1 {
-	font-size: 1.5em;
+	font-size: 1.125em;
 	color: rgb(213, 212, 251);
 }
+
 #question {
 	color: rgb(11, 9, 17);
-	font-size: 1.5em;
-	padding: 25px;
+	font-size: 1.125em;
+	padding: 1.875rem;
 }

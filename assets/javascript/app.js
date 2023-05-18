@@ -1,32 +1,26 @@
-//  Trivia Game
+// Trivia Game
 
-$(document).ready(function ()
-{
-
-  // event listeners
+$(document).ready(function() {
+  // Event listeners
   $("#remaining-time").hide();
   $("#start").on('click', trivia.startGame);
   $(document).on('click', '.option', trivia.guessChecker);
-
-})
+});
 
 var trivia = {
-
   correct: 0,
   incorrect: 0,
   unanswered: 0,
   currentSet: 0,
-  timer: 90,
+  timer: 90, // Increased timer to 90 seconds
   timerOn: false,
   timerId: '',
 
-
-  // questions, options and answers
-
+  // Questions, options, and answers
   questions: {
     q1: "How many colors are there in a rainbow?",
     q2: "What is the only rock regularly eaten by humans?",
-    q3: "What is the Worlds largest ocean?",
+    q3: "What is the World's largest ocean?",
     q4: "What was the first toy ever advertised on TV?"
   },
 
@@ -43,65 +37,60 @@ var trivia = {
     q3: 'Pacific',
     q4: 'Mr. Potato Head'
   },
-  //Start game
-  startGame: function ()
-  {
-    // restarting game results
+
+  // Start game
+  startGame: function() {
+    // Restarting game results
     trivia.currentSet = 0;
     trivia.correct = 0;
     trivia.incorrect = 0;
     trivia.unanswered = 0;
     clearInterval(trivia.timerId);
 
-    // show game section
+    // Show game section
     $('#game').show();
 
-    //  empty last results
+    // Empty last results
     $('#results').html('');
 
     $('#timer').text(trivia.timer);
 
-    // remove start button
+    // Remove start button
     $('#start').hide();
 
     $('#remaining-time').show();
 
-    // ask question
+    // Ask question
     trivia.nextQuestion();
-
   },
-  //  display questions and options
-  nextQuestion: function ()
-  {
 
-    // set timer per question
-    trivia.timer = 30;
+  // Display questions and options
+  nextQuestion: function() {
+    // Set timer per question
+    trivia.timer = 45; // Increased time per question to 45 seconds
     $('#timer').removeClass('last-seconds');
     $('#timer').text(trivia.timer);
-
 
     if (!trivia.timerOn) {
       trivia.timerId = setInterval(trivia.timerRunning, 1000);
     }
 
-    // gets all the questions
+    // Get the current question
     var questionContent = Object.values(trivia.questions)[trivia.currentSet];
     $('#question').text(questionContent);
 
-    //  options for the question
+    // Get options for the question
     var questionOptions = Object.values(trivia.options)[trivia.currentSet];
 
-    // options to  html
-    $.each(questionOptions, function (index, key)
-    {
+    // Add options to HTML
+    $.each(questionOptions, function(index, key) {
       $('#options').append($('<button class="option btn btn-info btn-lg">' + key + '</button>'));
-    })
-
+    });
   },
-  // Timer Countdown
-  timerRunning: function ()
-  {
-    // if timer still has time left and there are still questions left to ask
+
+  // Timer countdown
+  timerRunning: function() {
+    // If timer still has time left and there are still questions left to ask
     if (trivia.timer > -1 && trivia.currentSet < Object.keys(trivia.questions).length) {
       $('#timer').text(trivia.timer);
       trivia.timer--;
@@ -109,73 +98,63 @@ var trivia = {
         $('#timer').addClass('last-seconds');
       }
     }
-    // out of time
+    // Out of time
     else if (trivia.timer === -1) {
       trivia.unanswered++;
       trivia.result = false;
       clearInterval(trivia.timerId);
       resultId = setTimeout(trivia.guessResult, 1000);
-      $('#results').html('<h3>Sorry you are Out of time! The answer is ' + " " + Object.values(trivia.answers)[trivia.currentSet] + '</h3>');
+      $('#results').html('<h3>Sorry, you are out of time! The answer is ' + Object.values(trivia.answers)[trivia.currentSet] + '</h3>');
     }
-    // if all the questions have  shown end the game, show results
+    // If all questions have been shown, end the game and show results
     else if (trivia.currentSet === Object.keys(trivia.questions).length) {
+      // Add game results
+      $('#results').html('<h3>Thanks for playing!</h3>' +
+        '<p>Correct: ' + trivia.correct + '</p>' +
+        '<p>Incorrect: ' + trivia.incorrect + '</p>' +
+        '<p>Unanswered: ' + trivia.unanswered + '</p>' +
+        '<p>Click to play again!</p>');
 
-      // adds results of game
-      $('#results')
-        .html('<h3>Thanks for playing!</h3>' +
-          '<p>Correct: ' + trivia.correct + '</p>' +
-          '<p>Incorrect: ' + trivia.incorrect + '</p>' +
-          '<p>Unanswered: ' + trivia.unanswered + '</p>' +
-          '<p>Click to play again!</p>');
-
-      // hide game section
+      // Hide game section
       $('#game').hide();
 
-      // show start button to begin a new game
+      // Show start button to begin a new game
       $('#start').show();
     }
-
   },
 
-  guessChecker: function ()
-  {
-
-    // gameResult setTimeout
+  guessChecker: function() {
+    // Game result setTimeout
     var resultId;
 
-    // the answer to the  question
+    // The answer to the question
     var currentAnswer = Object.values(trivia.answers)[trivia.currentSet];
 
-    // if answer is right, add correct
+    // If the answer is correct
     if ($(this).text() === currentAnswer) {
-
       trivia.correct++;
       clearInterval(trivia.timerId);
-      resultId = setTimeout(trivia.guessResult, 1000);
-      $('#results').html('<h3>Great Correct Answer!</h3>');
+      resultId = setTimeout(trivia.guessResult, 2000); // Increased time to display the correct answer to 2 seconds
+      $('#results').html('<h3>Great! Correct answer!</h3>');
     }
-    // wrong answers
+    // Wrong answer
     else {
-
       trivia.incorrect++;
       clearInterval(trivia.timerId);
-      resultId = setTimeout(trivia.guessResult, 1000);
-      $('#results').html('<h3>No, Better luck next time! ' + currentAnswer + '</h3>');
+      resultId = setTimeout(trivia.guessResult, 2000); // Increased time to display the correct answer to 2 seconds
+      $('#results').html('<h3> No, better luck next time!<br><br> The correct answer is: ' + currentAnswer +  '</h3>');
     }
-
   },
-  //remove previous question
-  guessResult: function ()
-  {
-    // next question
+
+  // Remove previous question
+  guessResult: function() {
+    // Next question
     trivia.currentSet++;
 
-    // remove the options and results
+    // Remove options and results
     $('.option').remove();
     $('#results h3').remove();
 
     trivia.nextQuestion();
-
   }
-
-}
+};
